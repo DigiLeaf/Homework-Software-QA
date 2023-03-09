@@ -16,9 +16,9 @@ using namespace std;
 int main() {
 
 
-	BMIcalc(getheight(), getweight());
+	float BMI = BMIcalc(getheight(), getweight());
 
 
-
+	BMIcheck(BMI);
 
 };
