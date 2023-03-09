@@ -64,14 +64,28 @@ float BMIcalc(float height, float weight) {
 	//divide weight in kg by height in cm2
 	float BMIestimate = weightkg / heightcm2;
 
-	//for testing purposes to ensure calculations are correct
-	cout << BMIestimate;
 	return BMIestimate;
 
 };
 
-void BMIcheck() {
+void BMIcheck(float BMIestimate) {
 
+	if (BMIestimate < 18.5)
+	{
+		cout << "You are underweight";
+	}
+	else if (BMIestimate >= 18.5 && BMIestimate < 24.9)
+	{
+		cout << "You are Normal weight";
+	}
+	else if (BMIestimate >= 25 && BMIestimate < 29.9)
+	{
+		cout << "You are Overweight";
+	}
+	else if (BMIestimate >= 30)
+	{
+		cout << "You are Obese";
+	}
 
 
 
