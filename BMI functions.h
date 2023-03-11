@@ -13,12 +13,18 @@
 using namespace std;
 
 
-float getheight() {
 
+float BMIcalc() {
+
+	float weight;
 	float height;
 	float heightin;
 	float inches;
-	//gathering info on user 
+
+	//gathering info on user
+	cout << "How many pounds do you weigh? (ex: 125) ";
+	cin >> weight;
+
 	cout << "How many feet tall are you? (ex: 5) ";
 	cin >> height;
 
@@ -31,23 +37,7 @@ float getheight() {
 	//adding the feet converted to inches and the extra inches for total inches tall
 	float totalheightin = heightin + inches;
 
-	return totalheightin;
 
-};
-
-float getweight() {
-
-	float weight;
-
-	//gathering info on user
-	cout << "How many pounds do you weigh? (ex: 125) ";
-	cin >> weight;
-
-	return weight;
-
-}
-
-float BMIcalc(float height, float weight) {
 
 	//multiply weight by metric conversion factor of 0.45
 	
@@ -55,7 +45,7 @@ float BMIcalc(float height, float weight) {
 
 	//multiply height in inches by metric conversion factor 0.025
 
-	float heightcm = height * 0.025;
+	float heightcm = totalheightin * 0.025;
 
 	// square the height
 
