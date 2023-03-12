@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 
 /*	Program name: BMI calculator
 	Author: Leif Orth
@@ -54,6 +55,7 @@ float BMIcalc() {
 	//divide weight in kg by height in cm2
 	float BMIestimate = weightkg / heightcm2;
 
+	cout << "Your BMI is: " << fixed << setprecision(1) << BMIestimate << "\n";
 	return BMIestimate;
 
 };
@@ -64,11 +66,11 @@ void BMIcheck(float BMIestimate) {
 	{
 		cout << "You are underweight";
 	}
-	else if (BMIestimate >= 18.5 && BMIestimate < 24.9)
+	else if (BMIestimate >= 18.5 && BMIestimate < 25)
 	{
 		cout << "You are Normal weight";
 	}
-	else if (BMIestimate >= 25 && BMIestimate < 29.9)
+	else if (BMIestimate >= 25 && BMIestimate < 30)
 	{
 		cout << "You are Overweight";
 	}
@@ -76,8 +78,6 @@ void BMIcheck(float BMIestimate) {
 	{
 		cout << "You are Obese";
 	}
-
-
 
 
 };
